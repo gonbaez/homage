@@ -77,6 +77,7 @@ header .top .left > button .navigation ul li:not(.no-chevron):after {
 header .top .left > button .navigation ul li:hover {
   background-color: #f5f6f7;
 }
+header .top .left > button .navigation ul li:hover > form > input,
 header .top .left > button .navigation ul li:hover > input {
   background-color: #f5f6f7;
 }
@@ -89,7 +90,10 @@ header .top .left > button .navigation ul li .fake-nested-button {
 header .top .left > button .navigation ul li .fake-nested-button:hover {
   background-color: #f5f6f7;
 }
-header .top .left > button .navigation ul li .fake-nested-button:focus ~ .navigation, header .top .left > button .navigation ul li .fake-nested-button:focus-within ~ .navigation {
+header .top .left > button .navigation ul form:focus-within > .navigation {
+  display: block;
+}
+header .top .left > button .navigation ul .sub-sub-menu:focus-within ~ .navigation {
   display: block;
 }
 header .top .left > button .navigation ul li.line {
@@ -124,6 +128,12 @@ header .top .left > button .navigation ul li.back-chevron:before {
   content: "";
   transform: rotate(180deg);
 }
+header .top .left > button .navigation.dark {
+  background-color: #f0f0f0;
+}
+header .top .left > button .navigation.dark li:hover {
+  background-color: #e0e1e2;
+}
 header .top .left > button:hover, header .top .left > button:focus-within {
   background-color: #f0f0f0;
   border-bottom: 2px solid #636363;
@@ -147,6 +157,9 @@ header .top .left > button:focus-within .burger-line:last-child {
 }
 header .top .left > button:focus-within > .navigation {
   display: block;
+}
+header .top .left > button:focus-within > .navigation .navigation {
+  background-color: red;
 }
 header .top .left > button .burger-line {
   flex: 0 0 2px;

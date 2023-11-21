@@ -83,6 +83,7 @@ header {
               }
               &:hover {
                 background-color: #f5f6f7;
+                > form > input,
                 > input {
                   background-color: #f5f6f7;
                 }
@@ -97,12 +98,20 @@ header {
                 &:hover {
                   background-color: #f5f6f7;
                 }
-                &:focus,
-                &:focus-within {
-                  ~ .navigation {
-                    display: block;
-                  }
+              }
+            }
+
+            form {
+              &:focus-within {
+                > .navigation {
+                  display: block;
                 }
+              }
+            }
+
+            .sub-sub-menu:focus-within {
+              ~ .navigation {
+                display: block;
               }
             }
 
@@ -144,6 +153,15 @@ header {
           }
         }
 
+        .navigation.dark {
+          background-color: #f0f0f0;
+          li {
+            &:hover {
+              background-color: #e0e1e2;
+            }
+          }
+        }
+
         &:hover,
         &:focus-within {
           background-color: #f0f0f0;
@@ -171,6 +189,10 @@ header {
 
           > .navigation {
             display: block;
+            .navigation {
+              // put next to other navigation to translate
+              background-color: red;
+            }
           }
         }
 
