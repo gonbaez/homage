@@ -1,17 +1,9 @@
-.delete-me-space {
-  height: 600px;
-}
-
-@font-face {
-  font-family: "roboto";
-  src: url(./assets/Roboto-Regular_g.woff2);
-}
 header {
   background-color: #fff;
   border-bottom: 2px solid #d2d2d2;
 }
 header .top {
-  height: 58px;
+  height: 56px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -248,7 +240,7 @@ header .top .left .logo {
 }
 header .top .left .logo a {
   display: flex;
-  padding: 20px 12px;
+  padding: 15px 12px;
 }
 header .top .left .logo a svg:last-child {
   height: 0;
@@ -327,7 +319,7 @@ header .bottom {
 
 body {
   background-color: rgb(245, 246, 247);
-  font-family: roboto, Arial, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Arial, Helvetica, sans-serif;
 }
 
 .cookie-container {
@@ -546,6 +538,7 @@ main .main-top-container .main-banner .top-card {
 }
 main .main-top-container .main-banner .top-card .inner-top-card {
   text-align: center;
+  color: rgb(68, 68, 68);
 }
 main .main-top-container .main-banner .top-card .inner-top-card h2 {
   margin-top: 16px;
@@ -558,6 +551,7 @@ main .main-top-container .main-banner .top-card .inner-top-card h3 {
   font-size: 3.2rem;
   font-weight: 300;
   margin-bottom: 0.8rem;
+  line-height: 4.8rem;
 }
 main .main-top-container .main-banner .top-card .inner-top-card h4 {
   margin-top: 0px;
@@ -890,8 +884,9 @@ main .survey-container ul li:not(:first-child):not(:last-child) {
   border-radius: 50%;
   text-align: center;
   line-height: 48px;
-  margin: 0 8px;
+  margin: 2px 8px;
   background-color: rgb(240, 240, 240);
+  overflow: hidden;
 }
 main .survey-container ul li:not(:first-child):not(:last-child):hover {
   border: 2px solid #000;
@@ -1153,12 +1148,27 @@ main .survey-container ul li:last-child {
     text-align: left;
     width: 50%;
   }
+  main .main-top-container .main-banner .top-card .inner-top-card h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+  }
+  main .main-top-container .main-banner .top-card .inner-top-card h3 {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 4.8rem;
+  }
+  main .main-top-container .main-banner .top-card .inner-top-card h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
+  }
   main .main-top-container .main-banner .top-card .inner-top-card .fake-button {
     justify-content: flex-start;
   }
   main .main-top-container .category-wrapper {
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 10;
   }
   main .main-container {
@@ -1169,6 +1179,12 @@ main .survey-container ul li:last-child {
     max-width: 1920px;
     box-shadow: none;
     background-color: rgb(249, 249, 249);
+  }
+  main .main-container .explore-wrapper h2 {
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 4rem;
+    color: rgb(68, 68, 68);
   }
   main .main-container .product-wrapper {
     padding: 0px;
@@ -1193,6 +1209,21 @@ main .survey-container ul li:last-child {
     width: 41.67%;
     flex: 0 0 auto;
     justify-content: center;
+  }
+  main .main-container .product-wrapper:not(.promo) .product-legend h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+  }
+  main .main-container .product-wrapper:not(.promo) .product-legend h3 {
+    font-size: 3.2rem;
+    font-weight: 300;
+    line-height: 4rem;
+  }
+  main .main-container .product-wrapper:not(.promo) .product-legend h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.8rem;
   }
   main .main-container .product-wrapper.special .product-legend {
     width: 100%;
@@ -1261,35 +1292,36 @@ main .survey-container ul li:last-child {
     caret-color: transparent !important;
   }
   header .top .left > button > .navigation {
+    position: relative;
     display: block;
-    top: 56px;
+    top: 52px;
     left: 0;
     height: 46px;
     width: 100%;
   }
   header .top .left > button > .navigation ul:not(.sub-menu) > li:first-child .fake-nested-button {
     width: 8rem;
-    padding: 12px 36px 14px 0px;
+    padding: 10px 36px 10px 0px;
   }
   header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(2) .fake-nested-button {
     width: 17rem;
-    padding: 12px 36px 14px 16px;
+    padding: 10px 36px 10px 16px;
   }
   header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(3) .fake-nested-button {
     width: 23rem;
-    padding: 12px 36px 14px 16px;
+    padding: 10px 36px 10px 16px;
   }
   header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(4) .fake-nested-button {
     width: 12rem;
-    padding: 12px 36px 14px 16px;
+    padding: 10px 36px 10px 16px;
   }
   header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(5) .fake-nested-button {
     width: 11rem;
-    padding: 12px 36px 14px 16px;
+    padding: 10px 36px 10px 16px;
   }
   header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(6) .fake-nested-button {
     width: 10rem;
-    padding: 12px 36px 14px 16px;
+    padding: 10px 36px 10px 16px;
   }
   header .top .left > button > .navigation ul {
     z-index: -1;
@@ -1298,7 +1330,7 @@ main .survey-container ul li:last-child {
     display: flex;
     align-items: center;
     padding-top: 0;
-    margin: 0 24px;
+    margin: 0;
     height: 100%;
   }
   header .top .left > button > .navigation ul:not(.sub-menu) .fake-nested-button:not(.sub-sub-menu):hover, header .top .left > button > .navigation ul:not(.sub-menu) .fake-nested-button:not(.sub-sub-menu):focus-within {
@@ -1337,7 +1369,7 @@ main .survey-container ul li:last-child {
     display: block;
     position: fixed;
     z-index: -1;
-    top: 105px;
+    top: 104px;
     left: 0;
     height: 100%;
     width: 100%;
@@ -1349,7 +1381,7 @@ main .survey-container ul li:last-child {
   header .top .left > button > .navigation ul form:hover .navigation {
     transform: none;
     position: absolute;
-    top: 51px;
+    top: 44px;
     left: 0px;
     width: 242px;
     height: auto;
@@ -1406,12 +1438,12 @@ main .survey-container ul li:last-child {
   }
   header .top .left > button > .navigation ul li form div ul li:hover > .navigation {
     display: block;
-    left: 242px !important;
+    left: 241px !important;
     top: 0px !important;
     height: auto !important;
   }
   header .top .left > button > .navigation ul .sub-sub-menu:focus-within ~ .navigation {
-    left: 242px;
+    left: 240px;
     top: 0px;
     height: auto;
   }
@@ -1437,6 +1469,10 @@ main .survey-container ul li:last-child {
   }
   header .top .right div a .legend {
     display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
   header .top .right div a:after {
     content: "";
@@ -1455,6 +1491,7 @@ main .survey-container ul li:last-child {
   }
   header .top .right div:hover {
     background-color: #f9f9f9;
+    border: none;
   }
   header .top .right div:hover a:after {
     transform: rotate(-180deg);

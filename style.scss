@@ -1,11 +1,7 @@
-.delete-me-space {
-  height: 600px;
-}
-
-@font-face {
-  font-family: "roboto";
-  src: url(./assets/Roboto-Regular_g.woff2);
-}
+// @font-face {
+//   font-family: "roboto";
+//   src: url(./assets/Roboto-Regular_g.woff2);
+// }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Header
@@ -15,7 +11,7 @@ header {
   border-bottom: 2px solid #d2d2d2;
 
   .top {
-    height: 58px;
+    height: 56px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -302,7 +298,7 @@ header {
         padding: 0;
         a {
           display: flex;
-          padding: 20px 12px;
+          padding: 15px 12px;
 
           svg:last-child {
             height: 0;
@@ -402,7 +398,7 @@ header {
 
 body {
   background-color: rgb(245, 246, 247);
-  font-family: roboto, Arial, Arial, Helvetica, sans-serif;
+  font-family: Roboto, Arial, Arial, Helvetica, sans-serif;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -677,6 +673,7 @@ main {
         padding: 16px;
         margin: 0;
         color: #444;
+
         background-color: #fff;
         min-height: 256px;
         box-shadow: 0 2px 2px rgba(0, 42, 88, 0.08),
@@ -684,7 +681,7 @@ main {
         justify-content: center;
         .inner-top-card {
           text-align: center;
-
+          color: rgb(68, 68, 68);
           h2 {
             margin-top: 16px;
             font-size: 1.6rem;
@@ -697,6 +694,7 @@ main {
             font-size: 3.2rem;
             font-weight: 300;
             margin-bottom: 0.8rem;
+            line-height: 4.8rem;
           }
 
           h4 {
@@ -1112,8 +1110,9 @@ main {
         border-radius: 50%;
         text-align: center;
         line-height: 48px;
-        margin: 0 8px;
+        margin: 2px 8px;
         background-color: rgb(240, 240, 240);
+        overflow: hidden;
 
         &:hover {
           border: 2px solid #000;
@@ -1505,6 +1504,23 @@ main {
             text-align: left;
             width: 50%;
 
+            h2 {
+              font-size: 2rem;
+              font-weight: 400;
+              line-height: 2.8rem;
+            }
+
+            h3 {
+              font-size: 4rem;
+              font-weight: 300;
+              line-height: 4.8rem;
+            }
+
+            h4 {
+              font-size: 2rem;
+              font-weight: 400;
+              line-height: 2.8rem;
+            }
             .fake-button {
               justify-content: flex-start;
             }
@@ -1514,7 +1530,7 @@ main {
 
       .category-wrapper {
         position: sticky;
-        top: 0;
+        top: -1px;
         z-index: 10;
       }
     }
@@ -1526,6 +1542,13 @@ main {
         max-width: 1920px;
         box-shadow: none;
         background-color: rgb(249, 249, 249);
+
+        h2 {
+          font-size: 3.2rem;
+          font-weight: 300;
+          line-height: 4rem;
+          color: rgb(68, 68, 68);
+        }
       }
 
       .product-wrapper {
@@ -1552,6 +1575,24 @@ main {
             width: 41.67%;
             flex: 0 0 auto;
             justify-content: center;
+
+            h2 {
+              font-size: 1.6rem;
+              font-weight: 400;
+              line-height: 2.4rem;
+            }
+
+            h3 {
+              font-size: 3.2rem;
+              font-weight: 300;
+              line-height: 4rem;
+            }
+
+            h4 {
+              font-size: 2rem;
+              font-weight: 400;
+              line-height: 2.8rem;
+            }
           }
         }
       }
@@ -1653,8 +1694,10 @@ main {
 
           > .navigation {
             // first sub-menu level
+            position: relative;
             display: block;
-            top: 56px;
+            top: 52px;
+
             left: 0;
             height: 46px;
             width: 100%;
@@ -1666,37 +1709,37 @@ main {
                 &:first-child {
                   .fake-nested-button {
                     width: 8rem;
-                    padding: 12px 36px 14px 0px;
+                    padding: 10px 36px 10px 0px;
                   }
                 }
                 &:nth-child(2) {
                   .fake-nested-button {
                     width: 17rem;
-                    padding: 12px 36px 14px 16px;
+                    padding: 10px 36px 10px 16px;
                   }
                 }
                 &:nth-child(3) {
                   .fake-nested-button {
                     width: 23rem;
-                    padding: 12px 36px 14px 16px;
+                    padding: 10px 36px 10px 16px;
                   }
                 }
                 &:nth-child(4) {
                   .fake-nested-button {
                     width: 12rem;
-                    padding: 12px 36px 14px 16px;
+                    padding: 10px 36px 10px 16px;
                   }
                 }
                 &:nth-child(5) {
                   .fake-nested-button {
                     width: 11rem;
-                    padding: 12px 36px 14px 16px;
+                    padding: 10px 36px 10px 16px;
                   }
                 }
                 &:nth-child(6) {
                   .fake-nested-button {
                     width: 10rem;
-                    padding: 12px 36px 14px 16px;
+                    padding: 10px 36px 10px 16px;
                   }
                 }
               }
@@ -1709,7 +1752,7 @@ main {
                 display: flex;
                 align-items: center;
                 padding-top: 0;
-                margin: 0 24px;
+                margin: 0;
                 height: 100%;
 
                 .fake-nested-button:not(.sub-sub-menu) {
@@ -1768,7 +1811,7 @@ main {
                   display: block;
                   position: fixed;
                   z-index: -1;
-                  top: 105px;
+                  top: 104px;
                   left: 0;
                   height: 100%;
                   width: 100%;
@@ -1785,7 +1828,7 @@ main {
                     // display: flex;
                     transform: none;
                     position: absolute;
-                    top: 51px;
+                    top: 44px;
                     left: 0px;
                     width: 242px;
                     height: auto;
@@ -1841,7 +1884,7 @@ main {
               li form div ul li:hover {
                 > .navigation {
                   display: block;
-                  left: 242px !important; // sorry
+                  left: 241px !important; // sorry
                   top: 0px !important; // sorry
                   height: auto !important; // sorry
                 }
@@ -1849,7 +1892,7 @@ main {
 
               .sub-sub-menu:focus-within {
                 ~ .navigation {
-                  left: 242px;
+                  left: 240px;
                   top: 0px;
                   height: auto;
                 }
@@ -1886,6 +1929,10 @@ main {
 
             .legend {
               display: block;
+              font-size: 1.4rem;
+              font-weight: 400;
+              flex-grow: 0;
+              flex-shrink: 0;
             }
 
             &:after {
@@ -1910,6 +1957,7 @@ main {
 
           &:hover {
             background-color: #f9f9f9;
+            border: none;
 
             a {
               &:after {
