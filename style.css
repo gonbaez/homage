@@ -21,6 +21,17 @@ header .top .left {
   display: flex;
   align-items: center;
 }
+header .top .left .mask {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 59px;
+  left: 320px;
+  height: 100%;
+  width: 100%;
+  filter: opacity(0.3);
+  background-color: black;
+}
 header .top .left > button {
   box-sizing: content-box;
   height: 20px;
@@ -85,16 +96,32 @@ header .top .left > button .navigation ul li .fake-nested-button {
   cursor: pointer;
   border: none;
   padding: 0;
-  width: 100%;
 }
 header .top .left > button .navigation ul li .fake-nested-button:hover {
   background-color: #f5f6f7;
 }
 header .top .left > button .navigation ul form:focus-within > .navigation {
   display: block;
+  transform: translateX(0px);
+}
+header .top .left > button .navigation ul form.language {
+  display: flex;
+}
+header .top .left > button .navigation ul form.language::before {
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 .942a7.058 7.058 0 1 0 0 14.116A7.058 7.058 0 0 0 8 .942ZM1.908 8.47h2.304c.028.801.122 1.564.278 2.263H2.537a6.053 6.053 0 0 1-.629-2.263Zm6.563-4.145V2.03c.715.263 1.348 1.11 1.782 2.295H8.471Zm2.069.942c.17.692.278 1.458.309 2.262H8.471V5.267h2.068ZM7.53 2.03v2.295H5.748C6.183 3.14 6.816 2.293 7.53 2.03Zm0 3.237v2.262H5.152c.031-.804.14-1.57.31-2.262H7.53ZM4.212 7.529H1.908a6.06 6.06 0 0 1 .629-2.262H4.49c-.157.7-.251 1.461-.279 2.262Zm.94.941H7.53v2.263H5.462a11.35 11.35 0 0 1-.31-2.263Zm2.378 3.204v2.297c-.715-.264-1.347-1.112-1.782-2.297H7.53Zm.94 2.297v-2.297h1.783c-.435 1.186-1.067 2.033-1.782 2.297Zm0-3.238V8.47h2.379c-.031.805-.14 1.57-.31 2.263H8.472ZM11.79 8.47h2.304a6.06 6.06 0 0 1-.629 2.263h-1.953c.157-.7.25-1.462.278-2.263Zm0-.94a12.302 12.302 0 0 0-.278-2.263h1.953c.347.69.566 1.454.628 2.262h-2.303Zm1.089-3.205h-1.63c-.26-.79-.602-1.473-1.008-2.011a6.136 6.136 0 0 1 2.638 2.011ZM5.76 2.315c-.405.538-.747 1.22-1.007 2.01H3.122a6.14 6.14 0 0 1 2.638-2.01Zm-2.638 9.36h1.63c.26.79.602 1.472 1.007 2.01a6.136 6.136 0 0 1-2.637-2.01Zm7.119 2.01c.405-.538.748-1.22 1.007-2.011h1.63a6.131 6.131 0 0 1-2.637 2.011Z' fill='%23636363'/%3E%3C/svg%3E");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-size: 16px 16px;
+  padding: 4px;
 }
 header .top .left > button .navigation ul .sub-sub-menu:focus-within ~ .navigation {
   display: block;
+  top: 0;
+  transform: translateX(0px);
 }
 header .top .left > button .navigation ul li.line {
   padding: 16px;
@@ -107,6 +134,21 @@ header .top .left > button .navigation ul li.line:before {
 }
 header .top .left > button .navigation ul li.line:hover {
   background-color: initial;
+}
+header .top .left > button .navigation ul li.contact {
+  display: flex;
+}
+header .top .left > button .navigation ul li.contact::before {
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 0c-.138-.006-.3-.009-.463-.009-6.602 0-11.974 5.271-12.136 11.834v8.755h1.54v.34a4.26 4.26 0 0 0 4.26 4.26h2V14h-2a4.26 4.26 0 0 0-3.649 2.1l-.011.02v-4.28c.161-5.397 4.575-9.711 9.996-9.711.163 0 .326.004.487.012l-.023-.001c.168-.01.363-.016.561-.016 5.391 0 9.769 4.335 9.839 9.709v4.287A4.267 4.267 0 0 0 22.805 14h-2.004v11.18h2a4.26 4.26 0 0 0 3.649-2.1l.011-.02v3.42l-6.46 3.38h-2.94V28h-2.12v4h5.62l8-4.24v-16C28.434 5.231 23.111-.013 16.563-.013c-.198 0-.394.005-.59.014L16.001 0zM7.08 18.26v-.003a2.12 2.12 0 0 1 1.994-2.116h.006v6.9a2.121 2.121 0 0 1-2-2.117v-.004zm17.84 2.66v.003a2.12 2.12 0 0 1-1.994 2.116h-.006v-6.9c1.118.065 2 .988 2 2.117v.004z' fill='%23636363'/%3E%3C/svg%3E");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-size: 16px 16px;
+  padding: 4px;
+  margin-right: 12px;
 }
 header .top .left > button .navigation ul li.title {
   color: #0e0e0e;
@@ -128,6 +170,22 @@ header .top .left > button .navigation ul li.back-chevron:before {
   content: "";
   transform: rotate(180deg);
 }
+header .top .left > button .navigation .navigation {
+  position: fixed;
+  height: 100%;
+  top: 59px;
+  left: 0px;
+  width: 320px;
+  transform: translateX(320px);
+}
+header .top .left > button .navigation .navigation .navigation {
+  position: fixed;
+  height: 100%;
+  top: 59px;
+  left: 0px;
+  width: 320px;
+  transform: translateX(320px);
+}
 header .top .left > button .navigation.dark {
   background-color: #f0f0f0;
 }
@@ -138,6 +196,9 @@ header .top .left > button:hover, header .top .left > button:focus-within {
   background-color: #f0f0f0;
   border-bottom: 2px solid #636363;
   margin-bottom: -2px;
+}
+header .top .left > button:focus-within ~ .mask {
+  display: block;
 }
 header .top .left > button:focus-within .burger-line:first-child {
   display: none;
@@ -157,9 +218,6 @@ header .top .left > button:focus-within .burger-line:last-child {
 }
 header .top .left > button:focus-within > .navigation {
   display: block;
-}
-header .top .left > button:focus-within > .navigation .navigation {
-  background-color: red;
 }
 header .top .left > button .burger-line {
   flex: 0 0 2px;
@@ -251,8 +309,17 @@ header .top .right > div a svg {
   height: 24px;
   width: 24px;
 }
+header .top .right > div a .legend,
+header .top .right > div a .sub-menu {
+  display: none;
+}
 header .top .right > div:hover {
   border-bottom: 2px solid #636363;
+  margin-bottom: -2px;
+}
+header .top .right div.country,
+header .top .right div.contact {
+  display: none;
 }
 header .bottom {
   height: 68px;
@@ -847,10 +914,10 @@ main .survey-container ul li:last-child {
     height: 0;
     width: 100%;
   }
-  header .top .left .logo svg path:first-child {
+  header .top .left .logo a svg:first-child {
     display: none;
   }
-  header .top .left .logo svg path:last-child {
+  header .top .left .logo a svg:last-child {
     height: 23px;
     width: 182px;
   }
@@ -1170,5 +1237,253 @@ main .survey-container ul li:last-child {
   main .main-container .we-are-wrapper .we-are-content .we-are-item .we-are-flex .content-description {
     margin-left: 24px;
     width: 100%;
+  }
+  header .top {
+    margin: 0 24px;
+  }
+  header .top .left > button {
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+  header .top .left > button .burger-line {
+    display: none;
+  }
+  header .top .left > button:focus-within ~ .mask {
+    z-index: -1;
+    top: 105px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  header .top .left > button input {
+    outline: none !important;
+    caret-color: transparent !important;
+  }
+  header .top .left > button > .navigation {
+    display: block;
+    top: 56px;
+    left: 0;
+    height: 46px;
+    width: 100%;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) > li:first-child .fake-nested-button {
+    width: 8rem;
+    padding: 12px 36px 14px 0px;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(2) .fake-nested-button {
+    width: 17rem;
+    padding: 12px 36px 14px 16px;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(3) .fake-nested-button {
+    width: 23rem;
+    padding: 12px 36px 14px 16px;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(4) .fake-nested-button {
+    width: 12rem;
+    padding: 12px 36px 14px 16px;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(5) .fake-nested-button {
+    width: 11rem;
+    padding: 12px 36px 14px 16px;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) > li:nth-child(6) .fake-nested-button {
+    width: 10rem;
+    padding: 12px 36px 14px 16px;
+  }
+  header .top .left > button > .navigation ul {
+    z-index: -1;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    margin: 0 24px;
+    height: 100%;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) .fake-nested-button:not(.sub-sub-menu):hover, header .top .left > button > .navigation ul:not(.sub-menu) .fake-nested-button:not(.sub-sub-menu):focus-within {
+    background-color: #f5f6f7;
+    box-shadow: inset 0 -2px 0 #707070;
+    border: none;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) li {
+    padding: 0;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) li.line, header .top .left > button > .navigation ul:not(.sub-menu) li.contact, header .top .left > button > .navigation ul:not(.sub-menu) li.language {
+    display: none;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) li::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%230E0E0E'%3E%3Cpath d='M30.485 7.244 16 21.729 1.515 7.244 0 8.757l16 16 16-16z'/%3E%3C/svg%3E");
+    background-size: 10px 8px;
+    background-position: 50%;
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+    display: block;
+    height: 20px;
+    width: 20px;
+    padding: 0;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) li:hover form .fake-nested-button:not(.sub-sub-menu) {
+    box-shadow: inset 0 -2px 0 #707070;
+  }
+  header .top .left > button > .navigation ul:not(.sub-menu) li:hover::after {
+    transform: rotate(-180deg);
+  }
+  header .top .left > button > .navigation ul li:hover form > .navigation {
+    display: block;
+  }
+  header .top .left > button > .navigation ul li:hover form > .mask {
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 105px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: opacity(0.3);
+    background-color: black;
+  }
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation, header .top .left > button > .navigation ul li:hover:hover .navigation,
+  header .top .left > button > .navigation ul form:focus-within .navigation,
+  header .top .left > button > .navigation ul form:hover .navigation {
+    transform: none;
+    position: absolute;
+    top: 51px;
+    left: 0px;
+    width: 242px;
+    height: auto;
+  }
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation ul, header .top .left > button > .navigation ul li:hover:hover .navigation ul,
+  header .top .left > button > .navigation ul form:focus-within .navigation ul,
+  header .top .left > button > .navigation ul form:hover .navigation ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #c4c4c4;
+  }
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation ul li.back-chevron,
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation ul li.title, header .top .left > button > .navigation ul li:hover:hover .navigation ul li.back-chevron,
+  header .top .left > button > .navigation ul li:hover:hover .navigation ul li.title,
+  header .top .left > button > .navigation ul form:focus-within .navigation ul li.back-chevron,
+  header .top .left > button > .navigation ul form:focus-within .navigation ul li.title,
+  header .top .left > button > .navigation ul form:hover .navigation ul li.back-chevron,
+  header .top .left > button > .navigation ul form:hover .navigation ul li.title {
+    display: none;
+  }
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation ul li, header .top .left > button > .navigation ul li:hover:hover .navigation ul li,
+  header .top .left > button > .navigation ul form:focus-within .navigation ul li,
+  header .top .left > button > .navigation ul form:hover .navigation ul li {
+    position: initial;
+    padding: 12px 0 12px 16px;
+  }
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation ul li .fake-nested-button, header .top .left > button > .navigation ul li:hover:hover .navigation ul li .fake-nested-button,
+  header .top .left > button > .navigation ul form:focus-within .navigation ul li .fake-nested-button,
+  header .top .left > button > .navigation ul form:hover .navigation ul li .fake-nested-button {
+    padding: 0;
+    width: initial;
+  }
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation ul li:not(.no-chevron), header .top .left > button > .navigation ul li:hover:hover .navigation ul li:not(.no-chevron),
+  header .top .left > button > .navigation ul form:focus-within .navigation ul li:not(.no-chevron),
+  header .top .left > button > .navigation ul form:hover .navigation ul li:not(.no-chevron) {
+    display: flex;
+  }
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation ul li:not(.no-chevron)::after, header .top .left > button > .navigation ul li:hover:hover .navigation ul li:not(.no-chevron)::after,
+  header .top .left > button > .navigation ul form:focus-within .navigation ul li:not(.no-chevron)::after,
+  header .top .left > button > .navigation ul form:hover .navigation ul li:not(.no-chevron)::after {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%230E0E0E'%3E%3Cpath d='M8.76 0 7.24 1.52 21.72 16 7.24 30.48 8.76 32l16-16z'/%3E%3C/svg%3E");
+    background-position: 8px 2px;
+    background-size: 13px 15px;
+    position: initial;
+    display: inline-block;
+    right: 0px;
+    top: 15px;
+  }
+  header .top .left > button > .navigation ul li:hover:focus-within .navigation ul li:not(.no-chevron):hover::after, header .top .left > button > .navigation ul li:hover:hover .navigation ul li:not(.no-chevron):hover::after,
+  header .top .left > button > .navigation ul form:focus-within .navigation ul li:not(.no-chevron):hover::after,
+  header .top .left > button > .navigation ul form:hover .navigation ul li:not(.no-chevron):hover::after {
+    transform: none;
+  }
+  header .top .left > button > .navigation ul li form div ul li:hover > .navigation {
+    display: block;
+    left: 242px !important;
+    top: 0px !important;
+    height: auto !important;
+  }
+  header .top .left > button > .navigation ul .sub-sub-menu:focus-within ~ .navigation {
+    left: 242px;
+    top: 0px;
+    height: auto;
+  }
+  header .top .left .logo a {
+    padding-left: 0;
+  }
+  header .top .right div.country,
+  header .top .right div.contact {
+    display: block;
+  }
+  header .top .right div {
+    position: relative;
+  }
+  header .top .right div a {
+    display: flex;
+    align-items: center;
+  }
+  header .top .right div a svg {
+    display: block;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+  }
+  header .top .right div a .legend {
+    display: block;
+  }
+  header .top .right div a:after {
+    content: "";
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    padding-right: 6px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='%230E0E0E'%3E%3Cpath d='M30.485 7.244 16 21.729 1.515 7.244 0 8.757l16 16 16-16z'/%3E%3C/svg%3E");
+    transition: transform 0.2s linear;
+  }
+  header .top .right div.contact a:after {
+    content: none;
+  }
+  header .top .right div:hover {
+    background-color: #f9f9f9;
+  }
+  header .top .right div:hover a:after {
+    transform: rotate(-180deg);
+  }
+  header .top .right div:hover .sub-menu {
+    display: block;
+    position: absolute;
+    top: 58px;
+    right: 0px;
+    background-color: #fff;
+    z-index: 100;
+    padding: 16px;
+    box-shadow: 0 4px 16px rgba(0, 43, 85, 0.12);
+    height: 158px;
+    width: 256px;
+    border-radius: 2px;
+  }
+  header .top .right div:hover ~ .mask {
+    position: fixed;
+    z-index: 99;
+    top: 58px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    filter: opacity(0.3);
+    background-color: black;
+  }
+  header .bottom {
+    display: block;
+    height: 46px;
   }
 }/*# sourceMappingURL=style.css.map */
